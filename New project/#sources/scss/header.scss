@@ -143,6 +143,10 @@ header {
   margin: auto;
   margin-top: 155px;
 
+  @media (max-width: 1500px) {
+    margin-top: 80px;
+  }
+
   // margin: 155px auto 157px;
 
   @include desktop {

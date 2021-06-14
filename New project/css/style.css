@@ -196,6 +196,11 @@ header::after {
   margin: auto;
   margin-top: 155px;
 }
+@media (max-width: 1500px) {
+  .first-screen {
+    margin-top: 80px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .first-screen {
     margin-top: 100px;
