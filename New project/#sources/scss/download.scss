@@ -1,0 +1,96 @@
+@import '_mixin.scss';
+
+.download-section {
+  width: 100%;
+  max-height: 682px;
+  padding: 99px 0;
+  background-color: #ffffff;
+  @include desktop {
+    padding: 80px 0;
+  }
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+}
+
+.container-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download-title {
+  .download-title-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    color: #2d3033;
+    text-align: center;
+    margin-bottom: 16px;
+
+    @include tablet {
+      font-size: 1.45rem;
+    }
+
+    @include mobile {
+      font-size: 1.25rem;
+    }
+  }
+  .download-description {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: #2d3033;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 39px;
+    @include tablet {
+      font-size: 0.55rem;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.download-button {
+  display: block;
+  width: 281px;
+  height: 47px;
+  margin: 0 auto;
+  background-color: #eb5e5e;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 20%);
+  transition: 0.3s ease;
+  transition-duration: 0.3s;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+  }
+  .download-button-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include mobile {
+      font-size: 0.5125rem;
+    }
+  }
+
+  @include mobile {
+    max-width: 150px;
+    height: 37px;
+    padding-top: 7px;
+  }
+}

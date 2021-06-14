@@ -1,0 +1,84 @@
+@import '_mixin.scss';
+
+.project-section {
+  width: 100%;
+}
+
+.project-container {
+  background-color: #ffffff;
+  max-width: 100%;
+  margin: auto;
+}
+
+.project-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-item {
+  width: 25%;
+  // min-width: 350px;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1px 1px;
+  border: 1px solid #ffffff;
+
+  // &:last-child {
+  //   border-right: 0;
+  // }
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #e84545;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+
+    .project-description-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .project-description-text {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @include desktop {
+    width: 25%;
+    height: 300px;
+  }
+
+  @include tablet {
+    width: 50%;
+    height: 200px;
+  }
+
+  @include mobile {
+    width: 50%;
+    height: 100px;
+  }
+}

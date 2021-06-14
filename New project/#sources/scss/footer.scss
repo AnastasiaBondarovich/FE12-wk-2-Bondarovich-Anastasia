@@ -1,0 +1,45 @@
+footer {
+  width: 100%;
+  max-height: 95px;
+  background-color: #313454;
+  padding: 29px 0;
+
+  @include tablet {
+    max-height: 80px;
+    padding: 15px 0;
+  }
+
+  @include mobile {
+    max-height: 60px;
+    padding: 15px 0;
+  }
+}
+
+.footer-describtion {
+  margin: auto;
+  text-align: center;
+}
+
+.footer-describtion-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #808080;
+  text-align: center;
+  line-height: 1.5;
+  @include tablet {
+    font-size: 0.675rem;
+  }
+
+  @include mobile {
+    font-size: 0.575rem;
+  }
+}
+
+span {
+  color: #ffffff;
+  &::before {
+    content: '\2764';
+    color: #e84545;
+  }
+}

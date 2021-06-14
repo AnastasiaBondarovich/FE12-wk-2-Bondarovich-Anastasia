@@ -1,0 +1,100 @@
+@import '_mixin.scss';
+
+.advantages-section {
+  background-color: #ffffff;
+}
+
+.advantages-container {
+  max-height: 690px;
+  max-width: 100%;
+
+  @include desktop {
+    max-height: 1035px;
+  }
+  @include tablet {
+    max-height: 2070px;
+  }
+  @include mobile {
+    max-height: 2070px;
+  }
+}
+
+.advantages-row {
+  max-width: 1076px;
+  padding-top: 120px;
+  padding-bottom: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  @include desktop {
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  @include tablet {
+    padding-top: 90px;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mobile {
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.advantages-item {
+  max-width: 296px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-right: 10px;
+
+  @include mobile {
+    max-width: 250px;
+  }
+}
+
+.advantages-item-content {
+  text-align: center;
+  .advantages-item-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 34px;
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 30px;
+    }
+  }
+  h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #2d3033;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+    @include mobile {
+      font-size: 0.675rem;
+      margin-bottom: 20px;
+    }
+  }
+  .advantages-item-description {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #6c7279;
+    text-align: center;
+    margin-bottom: 74px;
+    @include mobile {
+      font-size: 0.675rem;
+      margin-bottom: 50px;
+    }
+  }
+}

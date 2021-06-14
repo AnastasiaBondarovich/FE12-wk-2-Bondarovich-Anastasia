@@ -1,0 +1,231 @@
+@import '_mixin.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  background-image: url(/img/header-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  // background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  // top: 0;
+  // left: 0;
+  // min-width: 100%;
+  // min-height: 100%;
+  background-repeat: no-repeat;
+  // margin-left: -15px;
+  // margin-right: -15px;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #2b2e4a;
+    opacity: 0.75;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
+
+.container-header {
+  min-height: 100vh;
+  margin: auto;
+  // position: relative;
+  // z-index: 1;
+}
+
+.header-row {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+  margin: auto;
+}
+
+.header-menu {
+  height: 6.3125rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  // position: relative;
+  // z-index: 1;
+  border-bottom: 1px solid #50536a;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+
+.title-logo {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: #66697e;
+  text-transform: uppercase;
+  text-align: center;
+  &::after {
+    content: 'box';
+    text-transform: uppercase;
+    color: #f1f1f3;
+    margin-right: 30px;
+  }
+  @media (max-width: 900px) {
+    padding: 10px 0 10px;
+  }
+}
+
+.navigation-menu {
+  margin-left: auto;
+  min-width: 590px;
+
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-around;
+  // position: relative;
+  // z-index: 1;
+  .point-navigation-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .point-menu-item {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: #d7d7db;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      transition-duration: 0.4s;
+      display: inline-block;
+
+      &:hover {
+        border-bottom: 2px solid #eb5e5e;
+        transform: scale(1.3);
+      }
+
+      @include mobile {
+        font-size: 0.525rem;
+      }
+    }
+  }
+
+  @include tablet {
+    min-width: 500px;
+  }
+
+  @include mobile {
+    min-width: 250px;
+  }
+}
+
+.first-screen {
+  max-height: 650px;
+  max-width: 912px;
+  margin: auto;
+  margin-top: 155px;
+
+  // margin: 155px auto 157px;
+
+  @include desktop {
+    margin-top: 100px;
+  }
+
+  @include tablet {
+    margin-top: 60px;
+  }
+
+  @include mobile {
+    margin-top: 30px;
+  }
+}
+
+.first-screen-title {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0625rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 41px;
+
+  @include desktop {
+    font-size: 1.0625rem;
+  }
+
+  @include tablet {
+    font-size: 0.825rem;
+  }
+
+  @include mobile {
+    font-size: 0.825rem;
+  }
+}
+
+.first-screen-description {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.375rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 76px;
+
+  @include mobile {
+    font-size: 0.825rem;
+  }
+}
+
+.first-screnn-button {
+  display: block;
+  max-width: 201px;
+  height: 47px;
+  margin: 0 auto;
+  background-color: #eb5e5e;
+  padding: 15px 46px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 20%);
+  transition: 0.3s ease;
+  transition-duration: 0.3s;
+  &:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: scale(1.2);
+  }
+  .first-screnn-button-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include mobile {
+      font-size: 0.5125rem;
+    }
+  }
+
+  @include mobile {
+    max-width: 150px;
+    height: 37px;
+    padding-top: 7px;
+  }
+}
